@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/index.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="bt1-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#bt1"
+            type="button"
+            role="tab"
+            aria-controls="bt1"
+            aria-selected="true"
+          >
+            Bài tập 1
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="bt2-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#bt2"
+            type="button"
+            role="tab"
+            aria-controls="bt2"
+            aria-selected="false"
+          >
+            Bài tập 2
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="bt3-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#bt3"
+            type="button"
+            role="tab"
+            aria-controls="bt3"
+            aria-selected="false"
+          >
+            Bài tập 3
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="bt4-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#bt4"
+            type="button"
+            role="tab"
+            aria-controls="bt4"
+            aria-selected="false"
+          >
+            Bài tập 4
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="bt5-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#bt5"
+            type="button"
+            role="tab"
+            aria-controls="bt5"
+            aria-selected="false"
+          >
+            Bài tập 5
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content pt-3" id="myTabContent">
+        <!-- BT 1 -->
+        <div
+          class="tab-pane fade show active"
+          id="bt1"
+          role="tabpanel"
+          aria-labelledby="bt1-tab"
+        >
+          <div class="form-group">
+            <label for="">Nhập số ngày làm:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="workDays"
+              placeholder=""
+            />
+          </div>
+          <button onclick="calSalary()" class="btn btn-info mt-5">
+            Tính lương
+          </button>
+          <div id="resultSalary" class="mt-5 alert-success"></div>
+        </div>
+        <!-- BT 2 -->
+        <div
+          class="tab-pane fade"
+          id="bt2"
+          role="tabpanel"
+          aria-labelledby="bt2-tab"
+        >
+          <div class="form-group">
+            <label for="">Nhập só 1:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="num1"
+              placeholder=""
+            />
+
+            <label for="">Nhập só 2:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="num2"
+              placeholder=""
+            />
+
+            <label for="">Nhập só 3:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="num3"
+              placeholder=""
+            />
+
+            <label for="">Nhập só 4:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="num4"
+              placeholder=""
+            />
+
+            <label for="">Nhập só 5:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="num5"
+              placeholder=""
+            />
+          </div>
+          <button onclick="calAverage()" class="btn btn-info mt-5">
+            Tính trung bình
+          </button>
+          <div id="resultAverage" class="mt-5 alert-success"></div>
+        </div>
+        <!-- BT 3 -->
+        <div
+          class="tab-pane fade"
+          id="bt3"
+          role="tabpanel"
+          aria-labelledby="bt3-tab"
+        >
+          <div class="form-group">
+            <label for="">Nhập só tiền (USD):</label>
+            <input
+              type="number"
+              class="form-control"
+              id="money"
+              placeholder=""
+            />
+          </div>
+          <button onclick="convertUsdToVnd()" class="btn btn-info mt-5">
+            Đổi sang VND
+          </button>
+          <div id="resultConvertMoney" class="mt-5 alert-success"></div>
+        </div>
+        <!-- BT 4 -->
+        <div
+          class="tab-pane fade"
+          id="bt4"
+          role="tabpanel"
+          aria-labelledby="bt4-tab"
+        >
+          <div class="form-group">
+            <label for="">Nhập chiều dài:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="length"
+              placeholder=""
+            />
+          </div>
+          <div class="form-group">
+            <label for="">Nhập chiều rộng:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="width"
+              placeholder=""
+            />
+          </div>
+          <button onclick="calAreaPerimeter()" class="btn btn-info mt-5">
+            Tính diện tích, chu vi
+          </button>
+          <div id="resultAreaPerimeter" class="mt-5 alert-success"></div>
+        </div>
+        <!-- BT 5 -->
+        <div
+          class="tab-pane fade"
+          id="bt5"
+          role="tabpanel"
+          aria-labelledby="bt5-tab"
+        >
+          <div class="form-group">
+            <label for="">Nhập số có 2 ký số:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="digits"
+              placeholder=""
+            />
+          </div>
+          <button onclick="calSumDigits()" class="btn btn-info mt-5">
+            Tính tổng ký số
+          </button>
+          <div id="resultSumDigits" class="mt-5 alert-success"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/bt.js"></script>
+  </body>
+</html>
