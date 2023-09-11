@@ -1,10 +1,6 @@
 const basicDailySalary = 100000
 const baseUsdToVnd = 23500
 
-function isNotNull(num){
-
-}
-
 function calSalary(){
     let numWorkDays = parseFloat(document.getElementById("workDays").value)
     if (isNaN(numWorkDays)){
